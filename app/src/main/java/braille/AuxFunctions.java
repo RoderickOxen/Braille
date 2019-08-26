@@ -71,17 +71,17 @@ public class AuxFunctions {
                     //then skips to the other line and repeats
 
                     if (array[i][j]==1){
-                        output += ". ";
+                        output += ".   ";
                         //System.out.print("." + " ");
                     }
                     else{
-                        output += "  ";
+                        output += "    ";
                         //System.out.print(" " + " ");
 
                     }
                     if (j==1){
-                        output += " ";
-                        //System.out.print(" ");
+                        //output += " ";
+                        System.out.print(" ");
                     }
                 }
             }

@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,7 +24,7 @@ public class TranslateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_translate);
+        setContentView(R.layout.activity_word_convert);
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         addListenerOnButton();
@@ -81,6 +82,9 @@ public class TranslateActivity extends AppCompatActivity {
                 //toast.makeText(TranslateActivity.this, input.getText(), toast.LENGTH_SHORT).show()
 
                 txtView.setText(b.initialState(input.getText().toString()));
+
+                input.onEditorAction(EditorInfo.IME_ACTION_DONE); //hide keybord after button clicked
+
             }
         });
 
