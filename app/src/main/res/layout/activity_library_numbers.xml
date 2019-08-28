@@ -41,10 +41,15 @@
         android:id="@+id/buttonOne"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginLeft="129dp"
+        android:layout_marginTop="35dp"
         android:text="1"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="312dp" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonFour"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumbers" />
 
     <Button
         android:id="@+id/buttonAZ"

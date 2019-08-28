@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".MiniGameNormalGameActivity"></activity>
+        <activity android:name=".MiniGameEasyActivity"></activity>
+        <activity android:name=".MiniGameNormalGameActivity" />
         <activity android:name=".WordConvertActivity" />
         <activity android:name=".MiniGameMenuActivity" />
         <activity android:name=".LibraryPunctuationActivity" />

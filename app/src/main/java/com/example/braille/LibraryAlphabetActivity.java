@@ -31,7 +31,7 @@ public class LibraryAlphabetActivity extends AppCompatActivity {
     }
 
     private void addListenerOnButton() {
-        backButton = (Button) findViewById(R.id.buttonMenu);
+        backButton = (Button) findViewById(R.id.buttonMenu2);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

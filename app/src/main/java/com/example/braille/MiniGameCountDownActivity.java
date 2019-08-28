@@ -25,6 +25,7 @@ public class MiniGameCountDownActivity extends AppCompatActivity {
         textView = (TextView)findViewById(R.id.countdownView);
 
         startGame();
+
     }
 
     private void startGame(){
@@ -36,7 +37,7 @@ public class MiniGameCountDownActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                startActivity(new Intent(MiniGameCountDownActivity.this, MiniGameNormalGameActivity.class));
+                startActivity(new Intent(MiniGameCountDownActivity.this, MiniGameEasyActivity.class));
             }
         }.start();
 

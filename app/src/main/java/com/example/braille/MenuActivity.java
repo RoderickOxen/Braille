@@ -1,16 +1,24 @@
 package com.example.braille;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class MenuActivity extends AppCompatActivity {
+    Button libraryButton;
+    Button translateButton;
+    Button miniGameButton;
 
 
     @Override
@@ -36,15 +44,30 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
+        TextView txtView = (TextView)findViewById(R.id.textView3);
+
+        libraryButton = (Button) findViewById(R.id.buttonLibrary);
+        translateButton = (Button) findViewById(R.id.buttonTranslate);
+        miniGameButton = (Button) findViewById(R.id.buttonGame);
+
+
+        libraryButton.setTextColor(getApplication().getResources().getColor(R.color.Black2Grey)); //TAKE DEFAULT COLOR
+        translateButton.setTextColor(getApplication().getResources().getColor(R.color.Black2Grey)); //TAKE DEFAULT COLOR
+        miniGameButton.setTextColor(getApplication().getResources().getColor(R.color.Black2Grey)); //TAKE DEFAULT COLOR
+
+
         addListenerOnButton();
+
+
+
+
 
     }
 
     private void addListenerOnButton() {
 
-        Button libraryButton = (Button) findViewById(R.id.buttonLibrary);
-        Button translateButton = (Button) findViewById(R.id.buttonTranslate);
-        Button miniGameButton = (Button) findViewById(R.id.buttonGame);
+
 
 
         libraryButton.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +96,8 @@ public class MenuActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
 }
